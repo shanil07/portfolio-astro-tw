@@ -1,5 +1,6 @@
 ---
 import "../styles/default.css";
+import NavBar from './NavBar.astro'
 interface Props {
   title: string;
   description?: string;
@@ -19,9 +20,11 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+
     <title>{title}</title>
   </head>
-  <body>
+  <body class="h-screen bg-default overflow-auto">
+    <NavBar />
     <slot />
   </body>
   <footer>
@@ -32,21 +35,17 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@500&family=Varela+Round&display=swap');
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
   }
   html {
-    font-family: system-ui, sans-serif;
+    font-family: 'Varela Round', sans-serif;
     background: var(--bg-default);
     background-size: 224px;
+  }
+  .heading-s {
+    font-family: 'REM', sans-serif;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
