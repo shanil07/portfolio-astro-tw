@@ -4,6 +4,18 @@
   --primary: #46bae4;
   --secondary: #fcfdfd;
   --accent: #5951b2;  
+
+  color: var(--text);
+  background-color: var(--background);
 }
+
+.dark {
+  --text: #ECF2FF;
+  --background: #170d2a;
+  --primary: #46bae4;
+  --secondary: #273a3a;
+  --accent: #bebbe1;
+}
+
 
 
