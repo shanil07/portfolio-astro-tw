@@ -6,7 +6,11 @@ module.exports = {
     colors: {
       white: "ffffff",
       transparent: "transparent",
-      primary: "#91F9E5",
+      primary: "var(--primary)",
+      secondary: "var(--secondary)",
+    },
+    backgroundColor: {
+      default: "var(--bg-default)",
     },
     extend: {},
   },
