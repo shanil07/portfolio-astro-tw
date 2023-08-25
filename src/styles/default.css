@@ -1,17 +1,20 @@
 :root {
   --text: #170d2a;
   --background: #ECF2FF;
+  --background-secondary: #ECF2FF;
   --primary: #46bae4;
   --secondary: #fcfdfd;
   --accent: #5951b2;  
 
   color: var(--text);
   background-color: var(--background);
+  box-sizing: border-box;
 }
 
 .dark {
   --text: #ECF2FF;
   --background: #170d2a;
+  --background-secondary: #14618d;
   --primary: #46bae4;
   --secondary: #273a3a;
   --accent: #bebbe1;

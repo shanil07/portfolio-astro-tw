@@ -1,6 +1,6 @@
 ---
 import "../styles/default.css";
-import NavBar from './NavBar.astro'
+import NavBar from "./NavBar.astro";
 interface Props {
   title: string;
   description?: string;
@@ -24,9 +24,11 @@ const { title } = Astro.props;
 
     <title>{title}</title>
   </head>
-  <body class="h-screen bg-default overflow-auto">
+  <body class="h-full bg-default overflow-auto">
     <NavBar />
-    <slot />
+    <div class="mx-5 pt-2">
+      <slot />
+    </div>
   </body>
   <footer>
     <div class="text-primary">
@@ -36,17 +38,17 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
-@import url('https://fonts.googleapis.com/css2?family=REM:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=REM:wght@500&family=Varela+Round&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=REM:wght@500&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=REM:wght@500&family=Varela+Round&display=swap");
   :root {
   }
   html {
-    font-family: 'Varela Round', sans-serif;
+    font-family: "Varela Round", sans-serif;
     background: var(--bg-default);
     background-size: 224px;
   }
   .heading-s {
-    font-family: 'REM', sans-serif;
+    font-family: "REM", sans-serif;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,

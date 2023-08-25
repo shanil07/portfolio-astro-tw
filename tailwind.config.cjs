@@ -14,6 +14,8 @@ module.exports = {
     },
     backgroundColor: {
       default: "var(--background)",
+      secondary: "var(--background-secondary)",
+      transparent: "transparent",
     },
     extend: {},
     fontFamily: {
