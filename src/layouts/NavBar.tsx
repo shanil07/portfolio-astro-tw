@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 import { HamburgerMenu } from "../components/HamburgerMenu";
 
 const NavBar = () => {
@@ -7,6 +7,16 @@ const NavBar = () => {
   const toggleNav = () => {
     console.log("toggle nav called");
     setNavOpen((prev) => !prev);
+  };
+
+  const scrollToSection = (
+    e: MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    const section = document.getElementById(sectionId);
+    section?.scrollIntoView({ behavior: "smooth" });
+    history.pushState(null, "", `#${sectionId}`);
   };
 
   return (
@@ -18,20 +28,22 @@ const NavBar = () => {
             <a
               className="focus:text-primary font-heading p-4 ml-2 block hover:text-primary transition-colors cursor-pointer"
               href="#main"
+              onClick={(e) => scrollToSection(e, "main")}
             >
               Shanil
             </a>
           </li>
 
           {[
-            ["About", "#about"],
-            ["Technologies", "#tech"],
-            ["Projects", "#projects"],
+            ["About", "about"],
+            ["Technologies", "tech"],
+            ["Projects", "projects"],
           ].map(([title, url], index) => (
             <li className={`${index === 0 ? "ml-auto" : ""}`}>
               <a
-                className="focus:text-primary focus:font-bold p-4 block hover:text-primary hover:font-bold transition-colors cursor-pointer "
-                href={url}
+                className="focus:text-primary focus:font-bold p-4 block hover:text-primary hover:font-bold transition-colors cursor-pointer"
+                href={`#${url}`}
+                onClick={(e) => scrollToSection(e, url)}
               >
                 {title}
               </a>
