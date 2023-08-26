@@ -1,14 +1,15 @@
 import { useStore } from "@nanostores/react";
 import { theme } from "../store/theme";
-import { MoonIcon } from "../assets/logos/MoonIcon";
-import { SunIcon } from "../assets/logos/SunIcon";
+import { MoonIcon } from "../assets/icons/MoonIcon";
+import { SunIcon } from "../assets/icons/SunIcon";
 import { useEffect } from "react";
 
 const DarkModeSwitch = () => {
   const $theme = useStore(theme);
   const handleDarkModeClick = () => {
-    theme.set($theme === "dark" ? "light" : "dark");
-    localStorage.setItem("theme", "dark");
+    const newTheme = $theme === "dark" ? "light" : "dark";
+    theme.set(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   useEffect(() => {
