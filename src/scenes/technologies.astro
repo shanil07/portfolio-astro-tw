@@ -1,11 +1,30 @@
-<div>
-  <ul>
-    <li>React</li>
-    <li>JavaScript</li>
-    <li>HTML</li>
-    <li>CSS - SCSS, Tailwind</li>
-    <li>Java</li>
-    <li>Mongo DB</li>
-    <li>Astro</li>
-  </ul>
+---
+import reactLogo from "../assets/logos/react.svg";
+import astroLogo from "../assets/logos/astro.svg";
+import cssLogo from "../assets/logos/css.svg";
+import htmlLogo from "../assets/logos/html.svg";
+import javaLogo from "../assets/logos/java.svg";
+import mongoLogo from "../assets/logos/mongo.svg";
+import tailwindLogo from "../assets/logos/tailwind.svg";
+import typescriptLogo from "../assets/logos/typescript.svg";
+import { ImageItem } from "../components/ImageItem";
+
+const logos = [
+  { src: reactLogo, alt: "react logo", title: "React" },
+  { src: typescriptLogo, alt: "typescript logo", title: "Typescript" },
+  { src: javaLogo, alt: "java logo", title: "Java" },
+  { src: tailwindLogo, alt: "tailwind logo", title: "Tailwind" },
+  { src: cssLogo, alt: "css logo", title: "CSS" },
+  { src: htmlLogo, alt: "html logo", title: "HTML" },
+  { src: astroLogo, alt: "astro logo", title: "Astro" },
+  { src: mongoLogo, alt: "mongo logo", title: "MongoDB" },
+];
+---
+
+<div class="flex gap-10 flex-wrap items-center justify-center mt-32">
+  {
+    logos.map(({ src, alt, title }) => (
+      <ImageItem src={src} alt={alt} title={title} />
+    ))
+  }
 </div>
