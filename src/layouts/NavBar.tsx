@@ -16,7 +16,7 @@ const NavBar = () => {
     e.preventDefault();
     const section = document.getElementById(sectionId);
     section?.scrollIntoView({ behavior: "smooth" });
-    history.pushState(null, "", `#${sectionId}`);
+    history.replaceState(null, "", `#${sectionId}`);
   };
 
   return (
