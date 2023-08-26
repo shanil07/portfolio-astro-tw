@@ -8,6 +8,7 @@ module.exports = {
     colors: {
       white: "#ffffff",
       transparent: "transparent",
+      default: "var(--text)",
       primary: "var(--primary)",
       secondary: "var(--secondary)",
       accent: "var(--accent)",
