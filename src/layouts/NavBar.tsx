@@ -14,8 +14,11 @@ const NavBar = () => {
       {/* Desktop nav bar  */}
       <nav className="hidden md:flex w-full">
         <ul className="flex w-full">
-          <li className="p-4 hover:text-primary focus:text-primary hover transition-colors duration-200 ">
-            <a className="focus:text-primary font-heading" href="#main">
+          <li>
+            <a
+              className="focus:text-primary font-heading p-4 ml-2 block hover:text-primary transition-colors cursor-pointer"
+              href="#main"
+            >
               Shanil
             </a>
           </li>
@@ -25,12 +28,11 @@ const NavBar = () => {
             ["Technologies", "#tech"],
             ["Projects", "#projects"],
           ].map(([title, url], index) => (
-            <li
-              className={`p-4 hover:text-primary hover:font-bold focus:text-primary hover transition-colors duration-200 self-start ${
-                index === 0 ? "ml-auto" : ""
-              }`}
-            >
-              <a className="focus:text-primary focus:font-bold" href={url}>
+            <li className={`${index === 0 ? "ml-auto" : ""}`}>
+              <a
+                className="focus:text-primary focus:font-bold p-4 block hover:text-primary hover:font-bold transition-colors cursor-pointer "
+                href={url}
+              >
                 {title}
               </a>
             </li>
