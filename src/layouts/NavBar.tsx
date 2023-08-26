@@ -14,26 +14,27 @@ const NavBar = () => {
       {/* Desktop nav bar  */}
       <nav className="hidden md:flex w-full">
         <ul className="flex w-full">
-          <li className="p-4 hover:text-primary focus:text-primary transition-colors duration-200 self-start">
+          <li className="p-4 hover:text-primary focus:text-primary hover transition-colors duration-200 ">
             <a className="focus:text-primary font-heading" href="#main">
-              Shanil De Silva
+              Shanil
             </a>
           </li>
-          <li className="p-4 hover:text-primary focus:text-primary transition-colors duration-200 ml-auto">
-            <a className="focus:text-primary" href="#about">
-              About
-            </a>
-          </li>
-          <li className="p-4 hover:text-primary focus:text-primary transition-colors duration-200">
-            <a className="focus:text-primary" href="#tech">
-              Technologies
-            </a>
-          </li>
-          <li className="p-4 hover:text-primary focus:text-primary transition-colors duration-200">
-            <a className="focus:text-primary" href="#projects">
-              Projects
-            </a>
-          </li>
+
+          {[
+            ["About", "#about"],
+            ["Technologies", "#tech"],
+            ["Projects", "#projects"],
+          ].map(([title, url], index) => (
+            <li
+              className={`p-4 hover:text-primary hover:font-bold focus:text-primary hover transition-colors duration-200 self-start ${
+                index === 0 ? "ml-auto" : ""
+              }`}
+            >
+              <a className="focus:text-primary focus:font-bold" href={url}>
+                {title}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
       {/* Mobile nav bar */}
