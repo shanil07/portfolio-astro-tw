@@ -9,7 +9,6 @@ const NavBar = ({}) => {
   const $theme = useStore(theme);
 
   const toggleNav = () => {
-    console.log("toggle nav called");
     setNavOpen((prev) => !prev);
   };
 

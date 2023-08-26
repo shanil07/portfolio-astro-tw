@@ -8,7 +8,6 @@ type Props = {
 
 const ThemeWrapper = ({ children }: Props) => {
   const $theme = useStore(theme);
-  console.log($theme);
   return <div className={`${$theme} font-bold`}>{children}</div>;
 };
 

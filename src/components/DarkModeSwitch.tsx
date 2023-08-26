@@ -13,9 +13,9 @@ const DarkModeSwitch = () => {
   useEffect(() => {
     if (
       window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: light)").matches
+      window.matchMedia("(prefers-color-scheme: dark)").matches
     ) {
-      theme.set("light");
+      theme.set("dark");
     }
   }, []);
 
