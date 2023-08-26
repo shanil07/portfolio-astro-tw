@@ -6,7 +6,7 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     colors: {
-      white: "ffffff",
+      white: "#ffffff",
       transparent: "transparent",
       primary: "var(--primary)",
       secondary: "var(--secondary)",
@@ -23,6 +23,5 @@ module.exports = {
       heading: ["REM"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
   darkMode: ["class"],
 };

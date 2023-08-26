@@ -1,6 +1,6 @@
 ---
 import "../styles/default.css";
-import NavBar from "./NavBar.astro";
+import { NavBar } from "./NavBar";
 interface Props {
   title: string;
   description?: string;
@@ -25,7 +25,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="h-full bg-default overflow-auto">
-    <NavBar />
+    <NavBar client:load />
     <div class="mx-5 pt-2">
       <slot />
     </div>
