@@ -2,12 +2,22 @@ import { useStore } from "@nanostores/react";
 import { theme } from "../store/theme";
 import { MoonIcon } from "../assets/logos/MoonIcon";
 import { SunIcon } from "../assets/logos/SunIcon";
+import { useEffect } from "react";
 
 const DarkModeSwitch = () => {
   const $theme = useStore(theme);
   const handleDarkModeClick = () => {
     theme.set($theme === "dark" ? "light" : "dark");
   };
+
+  useEffect(() => {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches
+    ) {
+      theme.set("light");
+    }
+  }, []);
 
   return (
     <label htmlFor="dark-mode">
