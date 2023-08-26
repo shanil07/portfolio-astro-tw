@@ -1,20 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
 import AboutMe from "../scenes/about-me.astro";
 import Technologies from "../scenes/technologies.astro";
 import Projects from "../scenes/projects.astro";
 ---
 
 <Layout title="Shanil De Silva - Full stack engineer">
-  <div class="flex gap-20 flex-col">
-    <main>
-      <h1 class="text-primary text-5xl font-heading">Shanil De Silva</h1>
-      <h2 class="text-accent font-display text-2xl bold">
-        Full Stack Developer
-      </h2>
-    </main>
+  <main class="flex justify-center flex-col h-screen">
+    <div class="text-3xl font-bold">Hi, I'm <span>Shanil De Silva</span></div>
+    <h1
+      class="text-5xl font-heading font-extrabold bg-blueGradient text-transparent bg-clip-text"
+    >
+      Full Stack Developer.
+    </h1>
+    <div class="text-3xl">Specializing in interactive UI development</div>
+  </main>
+  <Section className="h-screen" title="About Me" id="about">
     <AboutMe />
+  </Section>
+  <Section className="h-screen" title="Technologies I've used" id="tech">
     <Technologies />
+  </Section>
+  <Section className="h-screen" title="Projects & Experience" id="projects">
     <Projects />
-  </div>
+  </Section>
 </Layout>

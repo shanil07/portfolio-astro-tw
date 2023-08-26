@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { HamburgerMenu } from "../components/HamburgerMenu";
 
 const NavBar = () => {
-  const [navOpen, setNavOpen] = useState(true);
+  const [navOpen, setNavOpen] = useState(false);
 
   const toggleNav = () => {
     console.log("toggle nav called");
@@ -10,7 +10,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="sticky top-0 bg-default">
+    <div className={`${navOpen ? "bg-secondary" : "bg-default"}`}>
       {/* Desktop nav bar  */}
       <nav className="hidden md:flex w-full">
         <ul className="flex w-full">

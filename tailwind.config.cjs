@@ -17,9 +17,15 @@ module.exports = {
       secondary: "var(--background-secondary)",
       transparent: "transparent",
     },
+    backgroundImage: (theme) => ({
+      blueGradient: `linear-gradient(to bottom, ${theme(
+        "colors.primary"
+      )}, ${theme("colors.accent")})`,
+    }),
     extend: {},
     fontFamily: {
-      display: ["Varela Round"],
+      sans: ["Poppins"],
+      display: ["Poppins"],
       heading: ["REM"],
     },
   },
