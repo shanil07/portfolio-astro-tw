@@ -7,9 +7,9 @@ interface Props {
 const { id, title, className = "" } = Astro.props;
 ---
 
-<section id={id} class={`mt-[60px] ${className}`}>
+<section id={id} class={`${className}`}>
   <h2
-    class="font-heading text-2xl mb-4 bg-blueGradient bg-clip-text text-transparent"
+    class="font-heading text-3xl mb-4 bg-blueGradient bg-clip-text text-transparent mt-[60px]"
   >
     {title}
   </h2>
