@@ -11,7 +11,7 @@ const ImageItem = ({ title, ...rest }: Props) => {
   return (
     <div className="flex flex-col items-center gap-y-4">
       <img className="w-16 md:w-32 aspect-square" {...rest} />
-      <div className="text-default">{title}</div>
+      <div className="text-accent font-bold">{title}</div>
     </div>
   );
 };

@@ -59,7 +59,9 @@ const NavBar = ({}) => {
       </nav>
       {/* Mobile nav bar */}
       <div className={`flex md:hidden justify-between p-4 z-10`}>
-        <div className="font-heading bold">Shanil De Silva</div>
+        <div className="font-heading bold">
+          <a onClick={(e) => scrollToSection(e, "main")}>Shanil De Silva</a>
+        </div>
         <div className="flex gap-5">
           <DarkModeSwitch />
           <label
