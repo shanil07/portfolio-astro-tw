@@ -8,9 +8,15 @@ const DarkModeSwitch = () => {
   const $theme = useStore(theme);
   const handleDarkModeClick = () => {
     theme.set($theme === "dark" ? "light" : "dark");
+    localStorage.setItem("theme", "dark");
   };
 
   useEffect(() => {
+    // Local storage preference overrides system preference
+    if (localStorage.getItem("theme") === "dark") {
+      theme.set("dark");
+      return;
+    }
     if (
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches
