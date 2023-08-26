@@ -1,10 +1,9 @@
 import { useStore } from "@nanostores/react";
 import { theme } from "../store/theme";
-import type { ChangeEvent } from "react";
 import { MoonIcon } from "../assets/logos/MoonIcon";
 import { SunIcon } from "../assets/logos/SunIcon";
 
-const DarkModeSwitch = (props: Props) => {
+const DarkModeSwitch = () => {
   const $theme = useStore(theme);
   const handleDarkModeClick = () => {
     theme.set($theme === "dark" ? "light" : "dark");
