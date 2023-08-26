@@ -13,7 +13,7 @@ const DarkModeSwitch = () => {
     <label htmlFor="dark-mode">
       <a className="cursor-pointer">
         {$theme === "dark" ? (
-          <SunIcon className="h-[25px] w-[25px] text-default shadow-xl" />
+          <SunIcon className="h-[25px] w-[25px] text-default" />
         ) : (
           <MoonIcon className="h-[25px] w-[25px] text-default" />
         )}
