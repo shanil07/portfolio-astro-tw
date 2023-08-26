@@ -5,7 +5,7 @@
   --primary: #2aabda;
   --secondary: #fcfdfd;
   --accent: #5951b2;  
-  --sun: #edf049
+  --link: #e67207;
 
   color: var(--text);
   box-sizing: border-box;
@@ -19,6 +19,7 @@
   --primary: #46bae4;
   --secondary: #273a3a;
   --accent: #bebbe1;
+  --link: #f19b2a;
   color: var(--text);
   background-color: var(--background);
 }
