@@ -1,0 +1,31 @@
+#blur-circle {
+    position: fixed;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    background-color: white;
+    transition: top 1s linear, left 1s linear;
+    translate: -50% -50%;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    animation: rotate 15s infinite linear;
+}
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(100px);
+}
+@keyframes rotate {
+    from {
+        rotate: 0deg
+    }
+    50% {
+        scale: 1 1.5;
+    }
+    to {
+        rotate: 360deg;
+    }
+    
+}

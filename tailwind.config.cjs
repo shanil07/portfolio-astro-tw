@@ -24,17 +24,7 @@ module.exports = {
         "colors.primary"
       )}, ${theme("colors.accent")})`,
     }),
-    extend: {
-      keyframes: {
-        customSpin: {
-          "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(360deg)" },
-        },
-      },
-      animation: {
-        customSpin: "customSpin 1.5s ease-in-out infinite",
-      },
-    },
+    extend: {},
     fontFamily: {
       sans: ["Poppins"],
       display: ["Poppins"],
