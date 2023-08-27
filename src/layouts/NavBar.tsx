@@ -23,7 +23,8 @@ const NavBar = ({}) => {
   };
 
   return (
-    <div className={`${navOpen ? "bg-secondary" : "bg-default"}`}>
+    <div className={"bg-transparent "}>
+      <div className="absolute h-[80px] w-full bg-gradient-to-t from-transparent to-bgDefault -z-10" />
       {/* Desktop nav bar  */}
       <nav className="hidden md:flex w-full">
         <ul className="flex w-full">

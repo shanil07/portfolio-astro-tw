@@ -13,18 +13,20 @@ module.exports = {
       secondary: "var(--secondary)",
       accent: "var(--accent)",
       link: "var(--link)",
+      bgDefault: "var(--background)",
     },
     backgroundColor: {
       default: "var(--background)",
       secondary: "var(--background-secondary)",
       transparent: "transparent",
     },
-    backgroundImage: (theme) => ({
-      blueGradient: `linear-gradient(to bottom, ${theme(
-        "colors.primary"
-      )}, ${theme("colors.accent")})`,
-    }),
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        blueGradient: `linear-gradient(to bottom, ${theme(
+          "colors.primary"
+        )}, ${theme("colors.accent")})`,
+      }),
+    },
     fontFamily: {
       sans: ["Poppins"],
       display: ["Poppins"],
