@@ -1,6 +1,7 @@
 ---
 import "../styles/default.css";
 import { NavBar } from "./NavBar";
+import { BackgroundBlur } from "../components/BackgroundBlur/BackgroundBlur";
 import { ThemeWrapper } from "./ThemeWrapper";
 interface Props {
   title: string;
@@ -27,47 +28,51 @@ const { title } = Astro.props;
   <body class="h-full overflow-auto">
     <ThemeWrapper client:load>
       <div>
-        <div class="fixed top-0 bg-default w-full">
+        <BackgroundBlur
+          client:load
+          className="fixed top-0 left-0 w-full h-screen -z-10"
+        />
+        <div class="fixed top-0 bg-transparent w-full">
           <NavBar client:load />
         </div>
-        <div class="mx-5 pt-2 max-w-5xl md:mx-auto px-6 bg-default">
+        <div class="mx-5 pt-2 max-w-5xl md:mx-auto px-6 bg-transparent">
           <slot />
         </div>
       </div>
     </ThemeWrapper>
+    <ThemeWrapper client:load>
+      <footer class="py-6 text-xs w-full flex justify-center">
+        <div class="text-primary">
+          Developed by Shanil De Silva, built using <a
+            href="https://astro.build/"
+            class="underline cursor-pointer text-link"
+            target="_blank">Astro</a
+          >
+        </div>
+      </footer>
+    </ThemeWrapper>
+
+    <style is:global>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins&family=REM:wght@500&display=swap");
+      :root {
+      }
+      html {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg-default);
+        background-size: 224px;
+
+        /* Dark mode transition */
+      }
+      body * {
+        transition: background-color 0.2s linear, color 0.02s linear;
+      }
+      .heading-s {
+        font-family: "REM", sans-serif;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+    </style>
   </body>
-  <ThemeWrapper client:load>
-    <footer class="py-6 text-xs w-full flex justify-center">
-      <div class="text-primary">
-        Developed by Shanil De Silva, built using <a
-          href="https://astro.build/"
-          class="underline cursor-pointer text-link"
-          target="_blank">Astro</a
-        >
-      </div>
-    </footer>
-  </ThemeWrapper>
-
-  <style is:global>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins&family=REM:wght@500&display=swap");
-    :root {
-    }
-    html {
-      font-family: "Poppins", sans-serif;
-      background: var(--bg-default);
-      background-size: 224px;
-
-      /* Dark mode transition */
-    }
-    body * {
-      transition: background-color 0.2s linear, color 0.02s linear;
-    }
-    .heading-s {
-      font-family: "REM", sans-serif;
-    }
-    code {
-      font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-        DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-    }
-  </style>
 </html>
