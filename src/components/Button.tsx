@@ -4,11 +4,18 @@ type Props = {
   children: ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "outline";
+  id?: string;
 };
 
-const Button = ({ children, className, variant = "primary" }: Props) => {
+const Button = ({
+  children,
+  className,
+  variant = "primary",
+  ...rest
+}: Props) => {
   return (
     <button
+      {...rest}
       className={classnames(
         "rounded-md px-4 py-2 flex cursor-pointer",
         variant === "primary" && "bg-primary text-inverse",

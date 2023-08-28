@@ -18,13 +18,22 @@ import Projects from "../scenes/projects.astro";
         Full Stack Developer.
       </h1>
       <div class="text-3xl">Specializing in interactive UI development</div>
-      <Button className="w-fit gap-2 items-center mt-6 group" variant="outline">
+      <!-- <a
+        href="https://drive.google.com/uc?export=download&id=1qB3RhOf2TPmPTQ91HqA6F1nI51vdAkz6"
+        download="Shanil De Silva - CV.pdf"
+      > -->
+      <Button
+        className="w-fit gap-2 items-center mt-6 group"
+        variant="outline"
+        id="downloadButton"
+      >
         <DownloadIcon
           className="text-default group-hover:text-inverse"
           width={23}
         />
         <div>Resume</div>
       </Button>
+      <!-- </a> -->
     </main>
     <Section className="min-h-screen" title="About Me" id="about">
       <AboutMe />
@@ -41,3 +50,16 @@ import Projects from "../scenes/projects.astro";
     </Section>
   </div>
 </Layout>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const downloadButton = document.getElementById("downloadButton");
+    downloadButton?.addEventListener("click", function () {
+      const filePath = "./shanil-de-silva-cv.pdf";
+      const downloadLink = document.createElement("a");
+      downloadLink.href = filePath;
+      downloadLink.download = "shanil-desilva-cv.pdf";
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    });
+  });
+</script>
