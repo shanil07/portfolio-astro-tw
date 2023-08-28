@@ -1,12 +1,13 @@
 :root {
   --text: #170d2a;
+  --text-inverse: #ecf2ff;
   --background: #f0f7f7;
   --background-secondary: #ECF2FF;
   --primary: #2aabda;
   --secondary: #fcfdfd;
   --accent: #5951b2;  
   --link: #e67207;
-
+  
   color: var(--text);
   box-sizing: border-box;
   /* background-color: var(--background); */
@@ -14,6 +15,7 @@
 
 .dark {
   --text: #ECF2FF;
+  --text-inverse: #170d2a;
   --background: #170d2a;
   --background-secondary: #14618d;
   --primary: #46bae4;

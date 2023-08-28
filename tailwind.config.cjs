@@ -9,6 +9,7 @@ module.exports = {
       white: "#ffffff",
       transparent: "transparent",
       default: "var(--text)",
+      inverse: "var(--text-inverse)",
       primary: "var(--primary)",
       secondary: "var(--secondary)",
       accent: "var(--accent)",
@@ -18,6 +19,9 @@ module.exports = {
     backgroundColor: {
       default: "var(--background)",
       secondary: "var(--background-secondary)",
+      primary: "var(--primary)",
+      secondary: "var(--secondary)",
+      accent: "var(--accent)",
       transparent: "transparent",
     },
     extend: {

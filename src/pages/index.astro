@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
+import { Button } from "../components/Button";
+import { DownloadIcon } from "../assets/icons/DownloadIcon";
 import AboutMe from "../scenes/about-me.astro";
 import Technologies from "../scenes/technologies.astro";
 import Projects from "../scenes/projects.astro";
@@ -16,6 +18,13 @@ import Projects from "../scenes/projects.astro";
         Full Stack Developer.
       </h1>
       <div class="text-3xl">Specializing in interactive UI development</div>
+      <Button className="w-fit gap-2 items-center mt-6 group" variant="outline">
+        <DownloadIcon
+          className="text-default group-hover:text-inverse"
+          width={23}
+        />
+        <div>Resume</div>
+      </Button>
     </main>
     <Section className="min-h-screen" title="About Me" id="about">
       <AboutMe />
