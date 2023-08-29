@@ -21,7 +21,7 @@ const Button = ({
         variant === "primary" && "bg-primary text-inverse",
         variant === "secondary" && "bg-primary text-inverse",
         variant === "outline" &&
-          "bg-transparent border-2 border-primary hover:shadow-lg hover:bg-primary hover:text-inverse",
+          "bg-transparent border-2 border-primary hover:shadow-lg hover:bg-primaryFill hover:text-inverse focus:shadow-lg focus:bg-primaryFill focus:text-inverse",
         className
       )}
     >

@@ -18,11 +18,11 @@ module.exports = {
     },
     backgroundColor: {
       default: "var(--background)",
-      secondary: "var(--background-secondary)",
-      primary: "var(--primary)",
-      secondary: "var(--secondary)",
-      accent: "var(--accent)",
-      transparent: "transparent",
+      subdued: "var(--background-subdued)",
+      primaryFill: "var(--primary)",
+      secondaryFill: "var(--secondary)",
+      accentFill: "var(--accent)",
+      transparentFill: "transparent",
     },
     extend: {
       backgroundImage: (theme) => ({

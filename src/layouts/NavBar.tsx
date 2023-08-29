@@ -77,7 +77,7 @@ const NavBar = ({}) => {
           </label>
         </div>
         <nav
-          className={`absolute top-0 left-0 h-0 flex bg-secondary w-full group-checked:h-screen transition-[height] duration-300 justify-center items-center -z-10 overflow-hidden ${
+          className={`absolute top-0 left-0 h-0 flex bg-subdued w-full group-checked:h-screen transition-[height] duration-300 justify-center items-center -z-10 overflow-hidden ${
             navOpen ? "h-screen" : "h-0"
           }`}
         >

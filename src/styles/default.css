@@ -2,7 +2,7 @@
   --text: #170d2a;
   --text-inverse: #ecf2ff;
   --background: #f0f7f7;
-  --background-secondary: #ECF2FF;
+  --background-subdued: #ECF2FF;
   --primary: #2aabda;
   --secondary: #fcfdfd;
   --accent: #5951b2;  
@@ -17,10 +17,10 @@
   --text: #ECF2FF;
   --text-inverse: #170d2a;
   --background: #170d2a;
-  --background-secondary: #14618d;
+  --background-subdued: #14618d;
   --primary: #46bae4;
-  --secondary: #273a3a;
-  --accent: #bebbe1;
+  --secondary: #a3bdc2;
+  --accent: #93cae4;
   --link: #f19b2a;
   color: var(--text);
   /* background-color: var(--background); */
